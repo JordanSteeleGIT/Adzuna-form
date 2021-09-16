@@ -56,7 +56,7 @@ const MessageForm = ({ updateView }) => {
     <div className="form-wrapper">
       <h1>Enter Message</h1>
       {/* Novalidate is used to stop the default validation made by the browser*/}
-      <form onSubmit={handleSubmit(submitForm)} novalidate="novalidate">
+      <form onSubmit={handleSubmit(submitForm)} noValidate="novalidate">
         <div className="form-section small-section">
           <label className="label">Full Name</label>
           <input

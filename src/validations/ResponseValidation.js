@@ -11,7 +11,7 @@ export const responseSchema = yup.object().shape({
       "No emoji characters allowed in this field"
     ),
   // Validation will be true if its a not empty, a string and isn't a emoji. I also used trim so the user cant just press space and enter a blank name
-  // The emoji validation isn't perfect as it stops somethings at arent emojis
+  // The emoji validation isn't perfect as it stops somethings that arent emojis
   email: yup.string().email().required("Email is required"),
   // Validation will be true it in email format
   message: yup

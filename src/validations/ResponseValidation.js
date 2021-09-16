@@ -7,7 +7,7 @@ export const responseSchema = yup.object().shape({
     .trim()
     .required("Full Name is required")
     .matches(
-      /^[><?@+'`~^%&\*\[\]\{\}.!#|\\\"$';,:;=/\(\),\-\w\s+]*$/,
+      /^[><?@+'`~^%&£\*\[\]\{\}.!#|\\\"$';,:;=/\(\),\-\w\s+]*$/,
       "No emoji characters allowed in this field"
     ),
   // Validation will be true if its a not empty, a string and isn't a emoji. I also used trim so the user cant just press space and enter a blank name
@@ -18,7 +18,7 @@ export const responseSchema = yup.object().shape({
     .string()
     .trim()
     .matches(
-      /^[><?@+'`~^%&\*\[\]\{\}.!#|\\\"$';,:;=/\(\),\-\w\s+]*$/,
+      /^[><?@+'`~^%&£\*\[\]\{\}.!#|\\\"$';,:;=/\(\),\-\w\s+]*$/,
       "No emoji characters allowed in this field"
     )
     .min(20, "Message must be atleast 20 characters")

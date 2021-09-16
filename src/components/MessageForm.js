@@ -37,7 +37,7 @@ const MessageForm = ({ updateView }) => {
         chars: 0,
       });
     } else {
-      //Used update the useState object. Words calls the countWords function while chars just counts the length of the string
+      //Used to update the useState object. Words calls the countWords function while chars just counts the length of the string
       setTextLength({
         ...textLength,
         words: countWords(text),
@@ -48,19 +48,18 @@ const MessageForm = ({ updateView }) => {
 
   const submitForm = (data) => {
     if (data) {
-      // if validation is true change UpdateView to true (show thank you screen)
+      // If validation is true change UpdateView to true (show thank you screen)
       updateView(true);
     }
   };
   return (
     <div className="form-wrapper">
       <h1>Enter Message</h1>
-      {/* novalidate is used to stop the default validation made by the browser*/}
+      {/* Novalidate is used to stop the default validation made by the browser*/}
       <form onSubmit={handleSubmit(submitForm)} novalidate="novalidate">
         <div className="form-section small-section">
           <label className="label">Full Name</label>
           <input
-            className="input"
             name="fullname"
             type="text"
             {
@@ -74,18 +73,12 @@ const MessageForm = ({ updateView }) => {
         </div>
         <div className="form-section small-section">
           <label className="label">Email</label>
-          <input
-            className="input"
-            name="email"
-            type="email"
-            {...register("email")}
-          />
+          <input name="email" type="email" {...register("email")} />
           <p>{errors.email?.message}</p>
         </div>
         <div className="form-section large-section">
           <label className="label">Notes</label>
           <textarea
-            className="text-area"
             name="message"
             type="text"
             {...register("message")}

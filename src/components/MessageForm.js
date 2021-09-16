@@ -11,7 +11,7 @@ const MessageForm = ({ updateView }) => {
   }); // useState to store amount of characters and words
 
   const countWords = (str) => {
-    //This was taken from online. Didnt realize until too late that my implementation counted return button as a word
+    //This was taken from online. Didnt realize until too late that my implementation counted return as a word
     str = str.replace(/(^\s*)|(\s*$)/gi, ""); //exclude  start and end white-space
     str = str.replace(/[ ]{2,}/gi, " "); //2 or more space to 1
     str = str.replace(/\n /, "\n"); // exclude newline with a start spacing

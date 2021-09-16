@@ -8,7 +8,7 @@ const Submitted = ({ updateView }) => {
     <>
       <div className="submitted-wrapper">
         <button
-          class="back-button"
+          className="back-button"
           onMouseOver={() => setHover(true)} // on mouse hover set hover to true
           onMouseLeave={() => setHover(false)} // on mouse leave set hover to false
           onClick={() => updateView(false)} // this changes the useState in the form component to false. When its false it displays the form

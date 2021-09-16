@@ -32,14 +32,12 @@ const MessageForm = ({ updateView }) => {
     if (text.length === 0) {
       //Without this the useState that handles the count stays at 1 even if there isn't anything in the textarea
       setTextLength({
-        ...textLength,
         words: 0,
         chars: 0,
       });
     } else {
       //Used to update the useState object. Words calls the countWords function while chars just counts the length of the string
       setTextLength({
-        ...textLength,
         words: countWords(text),
         chars: text.length,
       });
